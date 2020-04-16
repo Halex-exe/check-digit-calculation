@@ -24,16 +24,16 @@ public class CheckDigitGUI extends JFrame{
                 int a = 0;
                 int b = 0;
                 int c = 0;
-                int d = 0;
-                int dv = 0;
+                int d;
+                int dv;
 
                 int[] codeReverse = reverse(textFieldCode.getText());
 
-                for (int i = 0; i < codeReverse.length; i++) {
-                    if ((codeReverse[i] % 2) != 0) {
-                        a += codeReverse[i];
-                    }else{
-                        c += codeReverse[i];
+                for (int value : codeReverse) {
+                    if ((value % 2) != 0) {
+                        a += value;
+                    } else {
+                        c += value;
                     }
                     b = a * 3;
                 }
@@ -57,7 +57,7 @@ public class CheckDigitGUI extends JFrame{
     }
 
     public static void main(String[] args) {
-        JFrame frame = new CheckDigitGUI("Calculadora de digito vérificador");
+        JFrame frame = new CheckDigitGUI("Calculadora de digito verificador");
         frame.setVisible(true);
     }
 }

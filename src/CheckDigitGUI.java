@@ -43,7 +43,7 @@ public class CheckDigitGUI extends JFrame{
             }
 
             public int[] reverse (String code){
-                var codeSplit = code.split("");
+                String[] codeSplit = code.split("");
                 int[] codeReversed = Arrays.stream(codeSplit).mapToInt(Integer::parseInt).toArray();
                 for(int i=0; i<codeReversed.length/2; i++){
                     int temp = codeReversed[i];

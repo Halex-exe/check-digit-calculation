@@ -29,11 +29,11 @@ public class CheckDigitGUI extends JFrame{
 
                 int[] codeReverse = reverse(textFieldCode.getText());
 
-                for (int value : codeReverse) {
-                    if ((value % 2) != 0) {
-                        a += value;
-                    } else {
-                        c += value;
+                for (int i = 0; i < codeReverse.length; i++) {
+                    if ((i % 2) == 0) {
+                        a += codeReverse[i];
+                    }else{
+                        c += codeReverse[i];
                     }
                     b = a * 3;
                 }
